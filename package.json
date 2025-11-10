@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "bcryptjs": "^3.0.2"
-<<<<<<< HEAD
   },
   "devDependencies": {
     "concurrently": "^9.2.1"
@@ -12,8 +11,3 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   }
 }
-
-=======
-  }
-}
->>>>>>> 914f293e0ddff6e1057d3903b34ac0b200663492
