@@ -1,0 +1,39 @@
+services:
+  mongo:
+    image: mongo:6
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.runCommand({ ping: 1 })"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  server:
+    build:
+      context: ./server
+    container_name: backend
+    env_file:
+      - ./server/.env
+    ports:
+      - "5001:5000"
+    depends_on:
+      mongo:
+        condition: service_healthy
+    # If you’re on Apple Silicon and hit image issues, uncomment:
+    # platform: linux/amd64
+
+  client:
+    build:
+      context: ./client
+    container_name: frontend
+    ports:
+      - "3001:80"
+    depends_on:
+      - server
+    # platform: linux/amd64
+volumes:
+  mongo_data:
