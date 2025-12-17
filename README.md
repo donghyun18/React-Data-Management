@@ -117,13 +117,10 @@ Here's an example of the Signup Form filled out on the web application:
 And here's how the user data, including the hashed password, is stored in the `users` collection within MongoDB Compass:
 ![User Data: Hashed Password Stored in MongoDB Compass](images/user_data_hashed_password_compass.png)
 
-<<<<<<< HEAD
 =======
 Here's if our login is completed successfully:
 ![login condition](images/login_successful.png)
 
-
->>>>>>> 914f293e0ddff6e1057d3903b34ac0b200663492
 ---
 
 ## Setup & Run Locally
@@ -210,8 +207,6 @@ This project serves as a robust foundation, and future enhancements could includ
 * **Cloud Deployment:** Deploying the backend server and MongoDB database to cloud services (e.g., Render, MongoDB Atlas) to enable a fully operational web application accessible globally.
 * **Data Visualization & Analytics Dashboard:** Implementing a dashboard to visualize collected data, such as adoption rates, volunteer hours, and donation trends, using libraries like `D3.js` or `Chart.js`.
 * **Advanced Data Analysis:** Applying advanced Big Data analytics techniques to the collected data for insights, such as predicting adoption success rates for specific animals, optimizing volunteer placement, or analyzing donation patterns.
-<<<<<<< HEAD
 * **User Authentication & Authorization:** Implementing full user login/signup, session management, and role-based access control.
 =======
-* **User Authentication & Authorization:** Implementing full user login/signup, session management, and role-based access control.
->>>>>>> 914f293e0ddff6e1057d3903b34ac0b200663492
+
