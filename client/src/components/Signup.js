@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
+import { API_BASE_URL } from '../config';
 
 const PASSWORD_CHECKS = [
   { key: 'length', label: 'At least 8 characters', test: (pw) => pw.length >= 8 },

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config';
 
 const Release = () => {
   const [formData, setFormData] = useState({
@@ -39,7 +40,7 @@ const Release = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5001/release', {
+      const response = await fetch(`${API_BASE_URL}/release`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(dataToSend),
